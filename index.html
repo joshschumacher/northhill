@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Take Action — North Hill Elementary</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: #f0ebe0;
+  font-family: 'Source Serif 4', Georgia, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.container { max-width: 560px; width: 100%; text-align: center; }
+
+.eyebrow { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #b8a888; margin-bottom: 1.25rem; }
+
+h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 3rem; line-height: 1.05; color: #f0ebe0; margin-bottom: 0.5rem; }
+
+h1 span { color: #c0392b; }
+
+.school { font-style: italic; font-size: 1.1rem; color: #8a7a60; margin-bottom: 2rem; }
+
+.divider { width: 48px; height: 1px; background: #c0392b; margin: 0 auto 2rem; }
+
+.body-text { font-size: 0.95rem; line-height: 1.75; color: #b8a888; margin-bottom: 2.5rem; }
+
+.demands { text-align: left; border-left: 3px solid #c0392b; padding: 1.5rem 1.5rem 1.5rem 1.75rem; margin-bottom: 2.5rem; background: rgba(255,255,255,0.03); }
+
+.demand-item { display: flex; gap: 0.75rem; margin-bottom: 0.6rem; font-size: 0.85rem; color: #c8b898; }
+
+.demand-item:last-child { margin-bottom: 0; }
+
+.demand-num { color: #c0392b; font-weight: 700; flex-shrink: 0; }
+
+.send-btn { display: inline-block; padding: 1rem 2.5rem; background: #c0392b; color: #f0ebe0; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background 0.2s ease; }
+
+.send-btn:hover { background: #a93226; }
+
+.note { margin-top: 1.25rem; font-size: 0.72rem; color: #5a5040; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="eyebrow">Highline School District · Take Action</p>
+  <h1>Protect Our<br><span>Educators.</span></h1>
+  <p class="school">North Hill Elementary Leadership Crisis</p>
+  <div class="divider"></div>
+  <p class="body-text">Our teachers cannot effectively support students while facing administrative intimidation. Send a pre-written email to Superintendent Duran and the School Board demanding immediate action.</p>
+  <div class="demands">
+    <div class="demand-item"><span class="demand-num">1.</span><span>Halt the North Hill transition until a neutral third-party audit is complete.</span></div>
+    <div class="demand-item"><span class="demand-num">2.</span><span>Retain current North Hill leadership for 2026–2027.</span></div>
+    <div class="demand-item"><span class="demand-num">3.</span><span>Reassign Sarah Talbot to a non-supervisory role pending investigation.</span></div>
+    <div class="demand-item"><span class="demand-num">4.</span><span>Guarantee whistleblower protections for all Highline staff.</span></div>
+  </div>
+  <a id="send-link" class="send-btn">Send This Email Now</a>
+  <p class="note">Opens your mail app pre-filled — add your name &amp; neighborhood before sending.</p>
+</div>
+<script>
+const to = "ivan.duran@highlineschools.org,SchoolBoardMembers@highlineschools.org";
+const cc = encodeURIComponent("protecthighlineeducators@protonmail.com");
+const subject = encodeURIComponent("URGENT: Leadership Crisis and Data Integrity Concerns");
+const body = encodeURIComponent(`Dear Superintendent Duran and School Board Directors,
+
+I am writing to express my alarm regarding the leadership crisis at North Hill Elementary. The Highline Promise is failing our educators. Evidence of filtered staff feedback and a culture of fear has decimated community trust. Our teachers cannot effectively support our students while facing administrative intimidation.
+
+I am demanding the following immediate actions:
+
+1. Halt the North Hill transition until a neutral third-party audit of the feedback process is complete.
+
+2. Retain current North Hill leadership for the 2026-2027 school year to ensure stability.
+
+3. Reassign Sarah Talbot to a non-supervisory role with no staff interaction pending a full investigation into allegations of verbal and psychological abuse.
+
+4. Guarantee whistleblower protections for all Highline staff.
+
+Transparency is a prerequisite for trust. I look forward to your immediate response.
+
+Sincerely,
+[Your Name]
+[Your Neighborhood]`);
+
+document.getElementById("send-link").href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+</script>
+</body>
+</html>
