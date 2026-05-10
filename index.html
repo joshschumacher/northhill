@@ -347,6 +347,9 @@ document.getElementById('copy-link-btn').addEventListener('click', function() {
       this.style.color = "#f0ebe0";
       this.style.borderColor = "#5a5040";
     }, 3000);
+  }).catch(err => {
+    console.error('Failed to copy campaign link: ', err);
+    alert("Clipboard access denied. Please manually select and copy the campaign link.");
   });
 });
 
