@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Take Action — North Hill Elementary</title>
+
+<!-- Open Graph / Social Sharing Tags -->
+<meta property="og:title" content="Protect Our Educators — North Hill Elementary">
+<meta property="og:description" content="Our teachers cannot effectively support students while facing administrative intimidation. Take action and email the Highline School Board today.">
+<meta property="og:type" content="website">
+<!-- Generated campaign image (replace with your hosted URL) -->
+<meta property="og:image" content="https://kristenprice6.github.io/northhill/protect-our-educators.png">
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
 
@@ -20,7 +28,8 @@ body {
   padding: 2rem 1.25rem;
 }
 
-.container { max-width: 560px; width: 100%; text-align: center; }
+/* 1) Increased content width to prevent truncation */
+.container { max-width: 580px; width: 100%; text-align: center; }
 
 .eyebrow { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #b8a888; margin-bottom: 1.25rem; }
 
@@ -42,11 +51,104 @@ h1 span { color: #c0392b; }
 
 .demand-num { color: #c0392b; font-weight: 700; flex-shrink: 0; }
 
-.send-btn { display: inline-block; padding: 1rem 2.5rem; background: #c0392b; color: #f0ebe0; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background 0.2s ease; }
+/* Form Styles with Visible Labels */
+.form-area { 
+  background: rgba(255,255,255,0.02); 
+  border: 1px solid rgba(255,255,255,0.05); 
+  padding: 2rem; 
+  margin-bottom: 2.5rem; 
+  border-radius: 4px;
+}
+
+.instructional-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f0ebe0;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.form-group-labeled { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 2.5rem; }
+
+.input-wrapper {
+  flex: 1 1 calc(50% - 8px); /* Stacks on small, 2-up on large */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #b8a888;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.form-input { 
+  width: 100%;
+  padding: 1rem; 
+  background: rgba(255,255,255,0.03); 
+  border: 1px solid #5a5040; 
+  color: #f0ebe0; 
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+  border-radius: 2px;
+}
+
+.form-input:focus { outline: none; border-color: #c0392b; background: rgba(255,255,255,0.06); }
+
+@media (max-width: 480px) {
+  .input-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+.send-btn-wrapper { margin-bottom: 1.5rem; display: block; text-align: center; width: 100%;}
+
+.send-btn { display: inline-block; width: 100%; padding: 1.1rem 2.5rem; background: #c0392b; color: #f0ebe0; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background 0.2s ease; font-weight: 700; border: none; }
 
 .send-btn:hover { background: #a93226; }
 
-.note { margin-top: 1.25rem; font-size: 0.72rem; color: #5a5040; font-style: italic; }
+.send-note {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  display: block;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.copy-btn { width: 100%; background: transparent; border: 1px solid #5a5040; color: #b8a888; padding: 1rem 2.5rem; cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; transition: all 0.2s; font-weight: 700; border-radius: 2px; }
+
+.copy-btn:hover { border-color: #8a7a60; color: #f0ebe0; }
+
+/* 2) Social Sharing Styles */
+.social-share { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+.social-label { font-size: 0.8rem; color: #8a7a60; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: block; }
+.social-buttons { display: flex; gap: 1rem; justify-content: center; }
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #5a5040;
+  border-radius: 50%;
+  color: #f0ebe0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+.share-btn:hover { background: rgba(255,255,255,0.07); border-color: #8a7a60; }
+.share-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
 </style>
 </head>
 <body>
@@ -55,21 +157,80 @@ h1 span { color: #c0392b; }
   <h1>Protect Our<br><span>Educators.</span></h1>
   <p class="school">North Hill Elementary Leadership Crisis</p>
   <div class="divider"></div>
-  <p class="body-text">Our teachers cannot effectively support students while facing administrative intimidation. Send a pre-written email to Superintendent Duran and the School Board demanding immediate action.</p>
+  <p class="body-text">Our teachers cannot effectively support students while facing administrative intimidation. Send an email to Superintendent Duran and the School Board demanding immediate action.</p>
+  
   <div class="demands">
     <div class="demand-item"><span class="demand-num">1.</span><span>Halt the North Hill transition until a neutral third-party audit is complete.</span></div>
     <div class="demand-item"><span class="demand-num">2.</span><span>Retain current North Hill leadership for 2026–2027.</span></div>
     <div class="demand-item"><span class="demand-num">3.</span><span>Reassign Sarah Talbot to a non-supervisory role pending investigation.</span></div>
     <div class="demand-item"><span class="demand-num">4.</span><span>Guarantee whistleblower protections for all Highline staff.</span></div>
   </div>
-  <a id="send-link" class="send-btn">Send This Email Now</a>
-  <p class="note">Opens your mail app pre-filled — add your name &amp; neighborhood before sending.</p>
+
+  <!-- Form Area with improved grouping and direct UX link -->
+
+    
+    <div class="form-group-labeled">
+      <div class="input-wrapper">
+        <label for="user-name" class="input-label">Your Name</label>
+        <input type="text" id="user-name" class="form-input" placeholder="Add your name">
+      </div>
+      <div class="input-wrapper">
+        <label for="user-hood" class="input-label">Your Neighborhood</label>
+        <input type="text" id="user-hood" class="form-input" value="North Hill Community Member">
+      </div>
+    </div>
+
+    <!-- Grouping button and context warning -->
+    <div class="send-btn-wrapper">
+      <a id="send-link" class="send-btn">Send This Email Now</a>
+      <span class="send-note">(Opens your default email application)</span>
+    </div>
+
+    <button id="copy-btn" class="copy-btn">Or Copy Email to Clipboard</button>
+
+
+  <!-- 2) New Social Sharing Buttons -->
+  <div class="social-share">
+    <span class="social-label">Share this campaign</span>
+    <div class="social-buttons">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkristenprice6.github.io%2Fnorthhill" target="_blank" rel="noopener" class="share-btn" title="Share on Facebook" aria-label="Share on Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/>
+        </svg>
+      </a>
+      <!-- X (Twitter) -->
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkristenprice6.github.io%2Fnorthhill&text=URGENT:%20Protect%20North%20Hill%20Educators." target="_blank" rel="noopener" class="share-btn" title="Share on X" aria-label="Share on X">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M18.9 2H22l-6.77 7.74L23 22h-6.08l-4.76-6.21L6.73 22H3.62l7.24-8.28L1 2h6.24l4.3 5.66L18.9 2zm-1.07 18h1.68L6.33 3.9H4.53L17.83 20z"/>
+        </svg>
+      </a>
+      <!-- Direct Link Copy (JS handled below) -->
+      <button id="copy-link-btn" class="share-btn" title="Copy campaign link">🔗</button>
+    </div>
+  </div>
 </div>
+
 <script>
+// Email Configuration
 const to = "ivan.duran@highlineschools.org,SchoolBoardMembers@highlineschools.org";
 const cc = encodeURIComponent("protecthighlineeducators@protonmail.com");
 const subject = encodeURIComponent("URGENT: Leadership Crisis and Data Integrity Concerns");
-const body = encodeURIComponent(`Dear Superintendent Duran and School Board Directors,
+const canonicalUrl = "https://kristenprice6.github.io/northhill";
+
+// Dynamically generate the email body based on inputs
+function getEmailBody(isUrlEncoded) {
+  // Capture inputs
+  const rawNameInput = document.getElementById('user-name').value.trim();
+  const rawHoodInput = document.getElementById('user-hood').value.trim();
+
+  // If name is empty, default back to [Your Name] for the email body.
+  const nameInput = rawNameInput || "[Your Name]";
+  
+  // Neighborhood has a default value, but if cleared completely, revert to [Your Neighborhood]
+  const hoodInput = rawHoodInput || "[Your Neighborhood]";
+  
+  const rawBody = `Dear Superintendent Duran and School Board Directors,
 
 I am writing to express my alarm regarding the leadership crisis at North Hill Elementary. The Highline Promise is failing our educators. Evidence of filtered staff feedback and a culture of fear has decimated community trust. Our teachers cannot effectively support our students while facing administrative intimidation.
 
@@ -86,10 +247,118 @@ I am demanding the following immediate actions:
 Transparency is a prerequisite for trust. I look forward to your immediate response.
 
 Sincerely,
-[Your Name]
-[Your Neighborhood]`);
+${nameInput}
+${hoodInput}`;
 
-document.getElementById("send-link").href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+  return isUrlEncoded ? encodeURIComponent(rawBody) : rawBody;
+}
+
+// Update the mailto: link dynamically
+function updateMailto() {
+  const body = getEmailBody(true);
+  document.getElementById("send-link").href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+}
+
+function ensureNameProvided() {
+  const nameField = document.getElementById('user-name');
+  const currentName = nameField.value.trim();
+
+  if (currentName) {
+    return true;
+  }
+
+  const enteredName = prompt('Please enter your name so we can pre-fill the email.');
+  if (!enteredName) {
+    nameField.focus();
+    return false;
+  }
+
+  const trimmedName = enteredName.trim();
+  if (!trimmedName) {
+    alert('Name is required to continue.');
+    nameField.focus();
+    return false;
+  }
+
+  nameField.value = trimmedName;
+  updateMailto();
+  return true;
+}
+
+document.getElementById('send-link').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  if (!ensureNameProvided()) {
+    return;
+  }
+
+  updateMailto();
+  window.location.href = this.href;
+});
+
+// Handle copying pre-written email text
+document.getElementById('copy-btn').addEventListener('click', function() {
+  if (!ensureNameProvided()) {
+    return;
+  }
+
+  const bodyText = getEmailBody(false);
+  
+  // Construct the full raw text including headers for context when pasting
+  const rawText = `TO: ivan.duran@highlineschools.org, SchoolBoardMembers@highlineschools.org
+CC: protecthighlineeducators@protonmail.com
+SUBJECT: URGENT: Leadership Crisis and Data Integrity Concerns
+
+${bodyText}`;
+
+  // Copy logic
+  navigator.clipboard.writeText(rawText).then(() => {
+    const btn = document.getElementById('copy-btn');
+    const originalText = btn.innerText;
+    
+    // Visual feedback
+    btn.innerText = "✓ Copied Email!";
+    btn.style.color = "#f0ebe0";
+    btn.style.borderColor = "#c0392b";
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      btn.innerText = originalText;
+      btn.style.color = "#b8a888";
+      btn.style.borderColor = "#5a5040";
+    }, 3000);
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+    alert("Clipboard access denied. Please manually select and copy the text.");
+  });
+});
+
+// 2) Handle copying campaign link
+document.getElementById('copy-link-btn').addEventListener('click', function() {
+  const pageUrl = canonicalUrl;
+
+  navigator.clipboard.writeText(pageUrl).then(() => {
+    this.innerText = "✓";
+    this.style.color = "#c0392b";
+    this.style.borderColor = "#c0392b";
+    
+    setTimeout(() => {
+      this.innerText = "🔗";
+      this.style.color = "#f0ebe0";
+      this.style.borderColor = "#5a5040";
+    }, 3000);
+  }).catch(err => {
+    console.error('Failed to copy campaign link: ', err);
+    alert("Clipboard access denied. Please manually select and copy the campaign link.");
+  });
+});
+
+// Event Listeners for real-time updates
+document.getElementById('user-name').addEventListener('input', updateMailto);
+document.getElementById('user-hood').addEventListener('input', updateMailto);
+
+// Initialize link on page load
+updateMailto();
 </script>
 </body>
 </html>
