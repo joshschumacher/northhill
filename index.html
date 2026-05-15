@@ -154,39 +154,36 @@ h1 span { color: #c0392b; }
 <body>
 <div class="container">
   <p class="eyebrow">Highline School District · Take Action</p>
-  <h1>Protect Our<br><span>Educators.</span></h1>
-  <p class="school">North Hill Elementary Leadership Crisis</p>
+  <h1>A Message to<br><span>Des Moines Elementary.</span></h1>
+  <p class="school">Supporting Our Highline Family</p>
   <div class="divider"></div>
-  <p class="body-text">Our teachers cannot effectively support students while facing administrative intimidation. Send an email to Superintendent Duran and the School Board demanding immediate action.</p>
   
   <div class="demands">
-    <div class="demand-item"><span class="demand-num">1.</span><span>Halt the North Hill transition until a neutral third-party audit is complete.</span></div>
-    <div class="demand-item"><span class="demand-num">2.</span><span>Retain current North Hill leadership for 2026–2027.</span></div>
-    <div class="demand-item"><span class="demand-num">3.</span><span>Reassign Sarah Talbot to a non-supervisory role pending investigation.</span></div>
-    <div class="demand-item"><span class="demand-num">4.</span><span>Guarantee whistleblower protections for all Highline staff.</span></div>
+    <p style="font-size: 0.95rem; line-height: 1.75; color: #b8a888; text-align: left; border: none; padding: 0; margin: 0; background: none;">
+      To our friends and neighbors at Des Moines Elementary:<br><br>
+      As a parent at North Hill, I wanted to reach out directly following the news that our leadership team will be staying in place.<br><br>
+      While our advocacy was focused on North Hill, it was never a fight against the Des Moines Elementary community. We know that DME is a wonderful school that deserves stable, long-term, and high-quality leadership. Our movement was rooted in the belief that all schools thrive when their leaders have autonomy and when administrative decisions are made with community input—not through top-down mandates that uproot successful teams.<br><br>
+      <strong style="color: #f0ebe0;">Please know this: Our advocacy does not stop at our own school's sidewalk.</strong><br><br>
+      We believe the District owes Des Moines Elementary a transparent and dedicated plan for leadership that isn't a "quick fix," but a long-term commitment to your students and staff. We will continue to hold the District accountable to ensure that DME receives the resources, staffing, and professional support it deserves.<br><br>
+      If you are a DME staff member or parent with concerns about how these transitions are being handled or if you feel your voice isn't being heard by the District, please reach out to us at:<br>
+      <strong style="color: #c0392b;">ProtectHighlineEducators@protonmail.com</strong><br><br>
+      We are all part of the same Highline family. When we demand respect and stability for one school, we are demanding it for every school in this district. We stand with you, and we will continue to advocate for a district culture that treats every building, every teacher, and every student with the respect they deserve.<br><br>
+      <strong style="color: #f0ebe0;">More to come.</strong>
+    </p>
   </div>
 
-  <!-- Form Area with improved grouping and direct UX link -->
-
+  <!-- Call-to-Action Buttons -->
+  <div class="form-area" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; margin-bottom: 2.5rem; border-radius: 4px;">
+    <p class="instructional-text" style="margin-bottom: 1.5rem;">Ready to take action?</p>
     
-    <div class="form-group-labeled">
-      <div class="input-wrapper">
-        <label for="user-name" class="input-label">Your Name</label>
-        <input type="text" id="user-name" class="form-input" placeholder="Add your name">
-      </div>
-      <div class="input-wrapper">
-        <label for="user-hood" class="input-label">Your Neighborhood</label>
-        <input type="text" id="user-hood" class="form-input" value="North Hill Community Member">
-      </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <!-- Button 1: Email Highline Communications -->
+      <a href="mailto:communication@highlineschools.org?cc=protecthighlineeducators@protonmail.com&subject=Concerns%20About%20District%20Leadership&body=Dear%20Highline%20Communications%2C%0A%0AI%20am%20writing%20to%20share%20concerns%20about%20how%20our%20District%20is%20handling%20leadership%20transitions%20and%20community%20engagement.%0A%0A" class="send-btn" style="text-align: center;">Email Highline Communications</a>
+      
+      <!-- Button 2: Email ProtectHighlineEducators -->
+      <a href="mailto:protecthighlineeducators@protonmail.com?subject=I%20Want%20to%20Support%20Our%20Schools&body=Hello%20Protect%20Highline%20Educators%2C%0A%0AI%20am%20reaching%20out%20because%20I%20care%20about%20our%20Highline%20schools%20and%20want%20to%20get%20involved.%0A%0A" class="send-btn" style="text-align: center;">Reach Out to Us</a>
     </div>
-
-    <!-- Grouping button and context warning -->
-    <div class="send-btn-wrapper">
-      <a id="send-link" class="send-btn">Send This Email Now</a>
-      <span class="send-note">(Opens your default email application)</span>
-    </div>
-
-    <button id="copy-btn" class="copy-btn">Or Copy Email to Clipboard</button>
+  </div>
 
 
   <!-- 2) New Social Sharing Buttons -->
@@ -212,129 +209,9 @@ h1 span { color: #c0392b; }
 </div>
 
 <script>
-// Email Configuration
-const to = "ivan.duran@highlineschools.org,SchoolBoardMembers@highlineschools.org";
-const cc = encodeURIComponent("protecthighlineeducators@protonmail.com");
-const subject = encodeURIComponent("URGENT: Leadership Crisis and Data Integrity Concerns");
-const canonicalUrl = "https://kristenprice6.github.io/northhill";
-
-// Dynamically generate the email body based on inputs
-function getEmailBody(isUrlEncoded) {
-  // Capture inputs
-  const rawNameInput = document.getElementById('user-name').value.trim();
-  const rawHoodInput = document.getElementById('user-hood').value.trim();
-
-  // If name is empty, default back to [Your Name] for the email body.
-  const nameInput = rawNameInput || "[Your Name]";
-  
-  // Neighborhood has a default value, but if cleared completely, revert to [Your Neighborhood]
-  const hoodInput = rawHoodInput || "[Your Neighborhood]";
-  
-  const rawBody = `Dear Superintendent Duran and School Board Directors,
-
-I am writing to express my alarm regarding the leadership crisis at North Hill Elementary. The Highline Promise is failing our educators. Evidence of filtered staff feedback and a culture of fear has decimated community trust. Our teachers cannot effectively support our students while facing administrative intimidation.
-
-I am demanding the following immediate actions:
-
-1. Halt the North Hill transition until a neutral third-party audit of the feedback process is complete.
-
-2. Retain current North Hill leadership for the 2026-2027 school year to ensure stability.
-
-3. Reassign Sarah Talbot to a non-supervisory role with no staff interaction pending a full investigation into allegations of verbal and psychological abuse.
-
-4. Guarantee whistleblower protections for all Highline staff.
-
-Transparency is a prerequisite for trust. I look forward to your immediate response.
-
-Sincerely,
-${nameInput}
-${hoodInput}`;
-
-  return isUrlEncoded ? encodeURIComponent(rawBody) : rawBody;
-}
-
-// Update the mailto: link dynamically
-function updateMailto() {
-  const body = getEmailBody(true);
-  document.getElementById("send-link").href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
-}
-
-function ensureNameProvided() {
-  const nameField = document.getElementById('user-name');
-  const currentName = nameField.value.trim();
-
-  if (currentName) {
-    return true;
-  }
-
-  const enteredName = prompt('Please enter your name so we can pre-fill the email.');
-  if (!enteredName) {
-    nameField.focus();
-    return false;
-  }
-
-  const trimmedName = enteredName.trim();
-  if (!trimmedName) {
-    alert('Name is required to continue.');
-    nameField.focus();
-    return false;
-  }
-
-  nameField.value = trimmedName;
-  updateMailto();
-  return true;
-}
-
-document.getElementById('send-link').addEventListener('click', function(event) {
-  event.preventDefault();
-
-  if (!ensureNameProvided()) {
-    return;
-  }
-
-  updateMailto();
-  window.location.href = this.href;
-});
-
-// Handle copying pre-written email text
-document.getElementById('copy-btn').addEventListener('click', function() {
-  if (!ensureNameProvided()) {
-    return;
-  }
-
-  const bodyText = getEmailBody(false);
-  
-  // Construct the full raw text including headers for context when pasting
-  const rawText = `TO: ivan.duran@highlineschools.org, SchoolBoardMembers@highlineschools.org
-CC: protecthighlineeducators@protonmail.com
-SUBJECT: URGENT: Leadership Crisis and Data Integrity Concerns
-
-${bodyText}`;
-
-  // Copy logic
-  navigator.clipboard.writeText(rawText).then(() => {
-    const btn = document.getElementById('copy-btn');
-    const originalText = btn.innerText;
-    
-    // Visual feedback
-    btn.innerText = "✓ Copied Email!";
-    btn.style.color = "#f0ebe0";
-    btn.style.borderColor = "#c0392b";
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      btn.innerText = originalText;
-      btn.style.color = "#b8a888";
-      btn.style.borderColor = "#5a5040";
-    }, 3000);
-  }).catch(err => {
-    console.error('Failed to copy text: ', err);
-    alert("Clipboard access denied. Please manually select and copy the text.");
-  });
-});
-
-// 2) Handle copying campaign link
+// Copy campaign link
 document.getElementById('copy-link-btn').addEventListener('click', function() {
+  const canonicalUrl = "https://kristenprice6.github.io/northhill";
   const pageUrl = canonicalUrl;
 
   navigator.clipboard.writeText(pageUrl).then(() => {
@@ -352,13 +229,6 @@ document.getElementById('copy-link-btn').addEventListener('click', function() {
     alert("Clipboard access denied. Please manually select and copy the campaign link.");
   });
 });
-
-// Event Listeners for real-time updates
-document.getElementById('user-name').addEventListener('input', updateMailto);
-document.getElementById('user-hood').addEventListener('input', updateMailto);
-
-// Initialize link on page load
-updateMailto();
 </script>
 </body>
 </html>
